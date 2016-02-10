@@ -11,8 +11,8 @@ my_order = {}
 
 
 ####### INSTRUCTIONS: ###########
-	#Use methods to add create your order, you can only call items from the main hash to them to the my_order hash- You should not be writing any strings unless you do the bonus. 
 
+	#Use methods to add create your order, you can only call items from the main hash to them to the my_order hash- You should not be writing any strings unless you do the bonus. 
 	#By end it should look something like: 
 		#my_order = { style: "burrito", meat: "chicken", rice_bean_veg: ["cilantro-lime brown rice", "black beans"], toppings: ["guacamole", "cheese", "romaine lettuce"]}
 
@@ -22,21 +22,26 @@ my_order = {}
 #STEP ONE:
 	#you are in line at chipotle and what to know what different styles they have
 	#Display all the options available for style 
-
+main[:style].each do |i|
+	puts i 
+end
 
 
 #STEP TWO:
 	#Using the empty my_order hash, 
 	#Chose your style from the available options and add a new key value pair to that hash
-
-
+my_order[:style] = main[:style][0]
 #STEP THREE:
 	#Chose what meat you want & add it to your my_order hash
 
+my_order[:meat]= main[:meat][1]
 #STEP FOUR:
 	#Chose what rice, bean or veggies you want and it it as a new key value pair to my_order. 
 		#HINT: You may want to chose more than one option, how will you store multiples in your order?
-
+my_order [:rice_bean_veg] = main[:rice_bean_veg] [0]
+my_order [:rice_bean_veg] << main[:rice_bean_veg][2]
+my_order [:rice_bean_veg] << main[:rice_bean_veg][4]
+puts my_order
 #STEP FIVE
 	#Check to see if your favorite topping is included in the available options
 
